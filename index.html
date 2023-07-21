@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/58fb37516c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo-transparent-png.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Master's Student at UTSA</p>
+            <h1>Hi, I'm <span>Sai Teja Thalari</span></h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/8388.JPEG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, and welcome to my website! My name is Sai Teja Thalari, and I'm thrilled to have this platform to share my passions and experience with you.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Trailblazer</span><br>Salesforce super badges</li>
+                        <li><span>Web development</span><br>Html-Css-Java script</li>
+                        <li><span>Dynamic programming</span><br>Problem solving</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021Aug-2022Aug</span><br>Systems Engineer(TCS)</li>
+                        <li><span>2023-Current</span><br>Grader(UTSA)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022Aug-Current</span><br>Masters at UTSA</li>
+                        <li><span>2017-2021</span><br>B.tech at Pragati Enginnering College</li>
+                        <li><span>2015-2017</span><br>Intermediate at Tirumala Junior College</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="certifications">
+    <div class="container">
+        <h1 class="sub-title">My Certifications</h1>
+        <div class="certifications-list">
+            <div>
+                <i class="fa-brands fa-salesforce"></i>
+                <h2>Salesforce Specalist</h2>
+                <p> Demonstrated expertise in Salesforce administration and security implementation, ensuring 
+                the confidentiality, integrity, and availability of data.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Web Design for Beginners</h2>
+                <p> web design for beginners:real world coding in html & css</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <h2>Accelerated Java script Training</h2>
+                <p> delved deep into the intricacies of JavaScript and gained expertise in areas such as variables, functions, 
+                control flow, and object-oriented programming.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------  contact information ---------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> saitejathalari@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i> (512) 915 5869</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/home"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/mynetwork/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/SAI_TEJA_THALARI RESUME.pdf" class="btn btn2">Curriculum vitae</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © SAI_TEJA_THALARI</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzPI0GQyC0OXE5TzdQL416fVggYaBx0tIhUBJDLsoYnSAjPnVhsWC33iJD3Pf4r5fQSpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },4000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
+    
